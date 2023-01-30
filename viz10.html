@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Satisfaction Histogram</title>
+    <meta name="author" content="Andrew Macpherson">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container viz-page">
+        
+        <!--Nav Bar-->
+        <div class="row nav-bar">
+            <div class="one column"><a href="/viz1.html">Viz. 1</a></div>
+            <div class="one column"><a href="/viz2.html">Viz. 2</a></div>
+            <div class="one column"><a href="/viz3.html">Viz. 3</a></div>
+            <div class="one column"><a href="/viz4.html">Viz. 4</a></div>
+            <div class="one column"><a href="/viz5.html">Viz. 5</a></div>
+            <div class="one column"><a href="/viz6.html">Viz. 6</a></div>
+            <div class="one column"><a href="/viz7.html">Viz. 7</a></div>
+            <div class="one column"><a href="/viz8.html">Viz. 8</a></div>
+            <div class="one column"><a href="/viz9.html">Viz. 9</a></div>
+            <div class="one column"><a class="active" href="/viz10.html">Viz. 10</a></div>
+            <div class="one column"><p></p></div><!--Spacer-->
+            <div class="one column" id="menu"><a href="/index.html">Menu</a></div>
+        </div>
+        
+        <div class="content">
+        
+            <div class="row">
+                <div class="twelve column" style="padding-top: 5vh">
+                    <h1>Percentage of Students Satisfied or Dissatisfied</h1>
+                    
+                    <div class='tableauPlaceholder' id='viz1639428220584' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project2NSSData&#47;SatisfactionHistograms' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1639428220584');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                    
+                    <p><br><br>
+                       This viz consists of 2 overlapping histograms depicting students’ overall satisfaction and dissatisfaction with their programmes, respectively. The first histogram, easily distinguished as the large peak on the left, represents the percentage of answers on the NSS that were negative, this being defined as all answers that were either a 1 or 2 (“Definitely disagree” and “Mostly disagree”) and the second, right, histogram is a count of the positive feedback, defined conversely as all answers that were a 4 or 5 (“Mostly agree” and “Definitely agree”). The color-coding is another representation of this latter metric, representing an absolute scale from 0-100% of answers that were positive. The histograms count bins of percentiles, meaning the number of responses that consisted of X% positive or negative feedback. The left histogram, showing the number of students who gave relatively negative feedback, is right-skewed, distribution centred around 10%. The right histogram is very approximately Normal, almost perfectly so though with a small left tail. The overlapping area represents students who gave feedback where their amount of positive and negative feedback were both below 50%; both tails represent more negative, less positive feedback. However, the overall picture here is one of green, of positive feedback. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <a href="index.html">
+                    <div class="twelve columns">
+                        <h5>Back to Main Menu</h5>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
