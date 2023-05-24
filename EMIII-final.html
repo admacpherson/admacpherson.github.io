@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+	Made using the following template + my own web design skills!
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Michigan Shot Physics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/emIII.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav Bar  - Note reverse ordering-->
+		<div class="topnav">
+			<a href="index.html#resume">Resumé</a>
+			<a href="index.html#three">Contact</a>
+			<a href="index.html#recs">Recommendations</a>
+			<a href="index.html#two">Work</a>
+			<a href="index.html#one">About</a>
+        </div>
+
+		<!-- Header -->
+			<header id="header" class="tz">
+				<div class="inner">
+					<h1 style="background: rgba(255, 255, 255, 0.8); color: #000"><strong style="color: #093d9c">The Michigan Shot</strong> is one of hockey's hottest moves. As it gains popularity around the league, let's explore the physics behind it.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Physics of the Michigan</h2>
+						</header>
+                        
+                        <h1>Introduction to the Michigan</h1>
+                        <p>Named for its first performance by Mike Legg at the University of Michigan in 1966, the Michigan shot resembles a move from lacross more than hockey. After balancing the puck flat on the shooter's stick plate, the player lifts their stick up and curves it towards the goal, dumping it into the goal off the goalie's shoulder. <br><br> The Michigan needs to be seen to be fully understood though. Here's Mike Legg trying the move out for the first time:</p>
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-m8Fd93faw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
+                        <p><br>Only in recent years has the move caught on across the NHL. After Andrei Svechnikov's initial Michigan goal in 2019, only 3 other players have been able to replicate the move. Schenikov has since done it again but has been beat out by Anaheim's Trevor Zegras, who's successfully pulled it off 3 times (though only counting in a game once), plus 2 more times when he's used the technique to perform a pass.</p>
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-m8Fd93faw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Experimental Setup</h2>
+						<div class="row">
+                            <p>To analyze the physics of what's going on, I deemed it necessary to capture my own data by performing the shot myself. As an amateur hockey player, this took some practice but I eventually was able to do it well enough that the motion was largely replicable. I then set up a camera and recorded myself performing the shot. I used a chair as a mock goal post around which to wrap the puck.</p>
+                            
+                            <img src="images/emIII/michigan.gif"><p></p>
+                            
+                            
+                            
+                        </div>
+                        
+                        <div class="row">
+                            <h4 style="text-decoration: underline">Materials</h4>
+                        </div>
+                        
+                        <div class="row"> 
+                            
+                            <p></p> <!--IDE won't accept closing tag! around <ul> element-->
+                            <ul>
+                                <li>Hockey stick</li>
+                                <li>Puck</li>
+                                <li>Tripod</li>
+                                <li>Camera</li>
+                            </ul>
+						</div>
+
+
+
+						<h2>Analysis Tools</h2>
+						<div class="row">
+							<p>After collecting my data, I analyzed it using two principle software tools.<br><br>
+                                First, I analyzed the videos in the freely available <a href="https://physlets.org/tracker/" target="_blank">Tracker</a> program from Physlets. Tracker allows the user to define several important variables to ensure accurate data. 
+                            </p>
+                            
+                            <p></p> <!--IDE won't accept closing tag! around <ul> element-->
+                            <ul>
+                                
+                                <li>Axes: 0° from horizontal with the origin centered at the puck in the first frame</li>
+                                <li>Frame Rate: 240.07 fps</li>
+                                <li>Calibration Stick: 0.43 m along the backrest of the chair</li>
+                                <li>Puck Mass: 53.7 g (0.537 kg)</li>
+                            </ul>
+                            
+                            <img src="images/emIII/tracker.png"  class="inline-image">
+						</div>
+                        
+                        <div class="row">
+                            <p><i>Tracker screenshot with axes and calibration stick</i></p>
+                        </div>
+                        
+                        <div class="row">
+                            <p>Tracker's main utility lies in its auto-tracking feature. Given a defined template of an object and a range for where it may appear in the next frame, Tracker can automatically follow the object frame by frame and mark its position while also recording/calculating data on numerous other variables, such as acceleration, velocity, and path length.</p>
+                    
+                            <img src="images/emIII/tracker2.png"  class="inline-image">
+                            
+                        </div>
+                        
+                        <div class="row">
+                            <p><i>Tracker screenshot demonstrating autotracking capabilities by frame</i></p>
+                        </div>
+                        
+                        
+                        
+                        <div class="row">
+                            <p>Google Sheets was the other tool that was also used. Sheets allows for web-based spreadsheet computing and was used to produce all graphs on this page.</p>
+                        </div>
+                        
+                </section>
+                
+                <section>
+                    <h2>Analysis</h2>
+                    <div class="row">
+                        <p>From Tracker, I exported data for <b>x</b>, <b>y</b>, <b>velocity</b>, and <b>time</b>. Plotting position in x and y against a time-axis shows us the relative motion of the stick in each direction over the course of the shot.</p>
+                        
+                        <img src="images/emIII/x&yvst.png" class="inline-image">
+                    </div>
+                    
+                    <div class="row">
+                         <p>Evidentally the puck rises smoothly in as it moves backwards than hooks around towards the net in x. Plotting x and y against each other gives a view of the Michigan shot in two dimensions.</p>
+                        
+                         <img src="images/emIII/michigan2D.png" class="inline-image">
+                    </div>
+                </section>
+
+
+        </div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://linkedin.com/in/macphersona" class="icon brands fa-linkedin" target="_blank"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:andrewmacpherson01@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Andrew Macpherson 2023</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
