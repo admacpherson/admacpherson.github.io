@@ -42,7 +42,7 @@
                         <h1>Introduction to the Michigan</h1>
                         <p>Named for its first performance by Mike Legg at the University of Michigan in 1966, the Michigan shot resembles a move from lacross more than hockey. After balancing the puck flat on the shooter's stick plate, the player lifts their stick up and curves it towards the goal, dumping it into the goal off the goalie's shoulder. <br><br> The Michigan needs to be seen to be fully understood though. Here's Mike Legg trying the move out for the first time:</p>
                         
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-m8Fd93faw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7TPk4RGqwVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         
                         <p><br>Only in recent years has the move caught on across the NHL. After Andrei Svechnikov's initial Michigan goal in 2019, only 3 other players have been able to replicate the move. Schenikov has since done it again but has been beat out by Anaheim's Trevor Zegras, who's successfully pulled it off 3 times (though only counting in a game once), plus 2 more times when he's used the technique to perform a pass.</p>
                         
@@ -70,6 +70,7 @@
                             <p></p> <!--IDE won't accept closing tag! around <ul> element-->
                             <ul>
                                 <li>Hockey stick</li>
+                                <li>Hockey tape (optional)</li>
                                 <li>Puck</li>
                                 <li>Tripod</li>
                                 <li>Camera</li>
@@ -120,19 +121,73 @@
                 </section>
                 
                 <section>
-                    <h2>Analysis</h2>
+                    <h2>Initial Analysis</h2>
                     <div class="row">
                         <p>From Tracker, I exported data for <b>x</b>, <b>y</b>, <b>velocity</b>, and <b>time</b>. Plotting position in x and y against a time-axis shows us the relative motion of the stick in each direction over the course of the shot.</p>
                         
-                        <img src="images/emIII/x&yvst.png" class="inline-image">
+                        <img src="images/emIII/x&yvst.png" class="inline-graph">
                     </div>
                     
                     <div class="row">
                          <p>Evidentally the puck rises smoothly in as it moves backwards than hooks around towards the net in x. Plotting x and y against each other gives a view of the Michigan shot in two dimensions.</p>
                         
-                         <img src="images/emIII/michigan2D.png" class="inline-image">
+                         <img src="images/emIII/michigan2D.png" class="inline-graph">
+                    </div>
+                    
+                    <!--Spacer-->
+                    <div class="row">
+                        <p></p>
+                    </div>
+                    
+                    <h2>Modeling Frictional Force</h2>
+                    <div class="row">
+                        <p>The underlying phenomena that makes the Michigan possible is the existence of static friction and centripetal acceleration. Just as, with enough speed, one can swing a bucket of water over their head without getting wet, a hockey player can keep the puck on their stick even at an angle where a stationary puck would be expected to fall.<br><br>
+                            
+                        The first force keeping the puck up is the aforementioned static friction. In a frictionless environment (such as the ice hockey is often played on), the puck would be expected to slide off the stick at any sort of angle from the horizontal. Yet this is not the case, even when stationary. Evidently, some sort of force must be keeping the puck up with a magnitude equal to the gravitational force pulling it down. It can be shown experimentally that the material of the tilted surface directly affects the angle of slippage via the <b>coeffieicnt of friction</b>.
+                        </p>
+                        
+                        <img src="images/emIII/angles%20of%20slippage%202d.jpeg" class="inline-graph">
+                    </div>
+                    
+                    <div class="row">
+                        <p> However, this model actually simplifies things a bit too much for a hockey stick. The curve of the blade means that the puck experiences gravitational force in two directions. If the above image is modeled along the xy-plane, one must also account for the z-axis in which the diagram is tilted out of or into the page. <br><br>
+                        When lying flat on the stick, the natural curve of the stick's blade leads to the surface itself being titled by 7° along the z-axis. With the natural materials of the stick, the blade can then be tilted 33° in the xy-plane before slippage begins to occur. However, if hockey tape is added to the stick, the surface on which the puck sits now has a higher coefficient of friction and does not slip until 37° of tilting. This is particularly useful for the Michigan, which relies on the puck being pinned in place despite downward gravitational force. <br><br>Note that many hockey players tape their sticks in different ways. Here I have used a standard heel-to-toe tape style to maximize friction. I have also modeled the surface the puck rests on as a flat surface since it largely is and the curve of the blade only comes into play when the puck is moving along the blade, which it is not for this shot. (For a good example of when it does, see the <a href="https://www.youtube.com/watch?v=cQfbBPBk-D0" target="_blank">toe drag</a>).
+                        </p>
+                        
+                        <img src="images/emIII/stick%20taping.jpg" class="inline-image">
+                    </div>
+                    
+                    <div class="row">
+                        <p><i>A stick being taped to increase the coefficient of friction</i></p>
+                    </div>
+                    
+                    <h2>Modeling Centripetal Force</h2>
+                    <div class="row">
+                        <p>The other force holding the puck in place, particularly when it moves, is the centripetal force that results from centripetal acceleration. As the puck accelerates through space along a curve, it experiences a force that pins it to the stick blade. <br><br> 
+                        Centripetal force of course comes from the curved acceleration of an object. Accelerating a water bucket in a straight line above your heard won't do anything to keep you from getting wet. <br><br>
+                        Though an object may appear to accelerate along a curve, at any given instant in time, the acceleration is linear and straightforward; it is merely having its direction changed continuously (this is why it is an acceleration, even if speed is kept constant). To see this in action, swing a cord with a mass of some sort tied to the end in a circle. If you let go, the mass will not continue to curve but will instead fly off in a straight line at the moment of release.
+                        <br><br>
+                        This linear acceleration can be modeled as having two components that are perpindicular to one another, one of which points inwards, towards the center of rotation. This is necessary since the total acceleration and tangential acceleration are not aligned – there must therefore be another vector component connecting them.
+                        </p>
+                        
+                        <img src="images/emIII/centripetal%20acceleration.jpeg" class="inline-graph">
+                    </div>
+                    
+                </section>
+                
+                <section>
+                    <h2>Calculating Values</h2>
+                    <div class="row">
+                        <p>Thus far I have only abstractly explained the forces holding the puck throughout the motion of the Michigan shot. Let us now calculate their values with real data.<br><br>
+                        As show above, the puck has a mass of 53.7 kg. Static friction
+                        </p>
+                    </div>
+                    
+                    <div class="row">
+                        <p>Acceleration</p>
                     </div>
                 </section>
+                
 
 
         </div>
