@@ -291,6 +291,10 @@ input, select, textarea {
     width: 40em;
 }
 
+.inline-equation {
+    height: 1.5em;
+}
+
 /* Row */
 
 	.row {
@@ -2740,7 +2744,7 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 1.35em;
 			line-height: 1.75em;
-			margin: 0;
+            margin-top: 8em;
 		}
 
 		#header .image.avatar {
