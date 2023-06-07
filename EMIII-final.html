@@ -36,10 +36,10 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Physics of the Michigan</h2>
+							<h1>Physics of the Michigan</h1>
 						</header>
                         
-                        <h1>Introduction to the Michigan</h1>
+                        <h2>Introduction to the Michigan</h2>
                         <p>Named for its first performance by Mike Legg at the University of Michigan in 1966, the Michigan shot resembles a move from lacross more than hockey. After balancing the puck flat on the shooter's stick plate, the player lifts their stick up and curves it towards the goal, dumping it into the goal off the goalie's shoulder. <br><br> The Michigan needs to be seen to be fully understood though. Here's Mike Legg trying the move out for the first time:</p>
                         
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/7TPk4RGqwVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -180,116 +180,54 @@
                     </div>
                     
                 </section>
-                
+        
                 <section>
-                    <h2>Calculating Values</h2>
-                    <div class="row">
-                        <p>Thus far I have only abstractly explained the forces holding the puck throughout the motion of the Michigan shot. Let us now calculate their values with real data. As show above, the puck has a mass of 53.7 g, which we will be using in all these calculations.
-                        </p>
-                    </div>
-                    
-                    <div class="row">
-                        <p>The normal force against the puck towards the stick blade is  given by</p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/normal.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p><br>where θ (theta) is the angle between the puck and the ground (the direction in which gravity acts). Plugging in m = 0.0537 kg and the constant g = 9.81 m/s², we find that </p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/normal%20calc.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p><br>Perhaps surprisingly, the frictional force is also dependent on the normal force. It may seem counterintuitive that two forces acting in very different ways are both dependent on the normal, but when considering that the puck is only in contact with one surface, it makes more sense. Frictional force is given by the equation </p>
-                    </div>
-                    
+                  <h2>Motion Analysis</h2>
+                  <p>Thus far I have only abstractly explained the forces holding the puck throughout the motion of the Michigan shot. Let us now calculate their values with real data. To do this, it is helpful to break down the motion of the shot into three distinct moments: the start of the shot, the maximum extension in x (the widest part of the shot - midway up), and the end of the shot where the puck comes off the stick blade.</p>
+                  <h3>Start of the Shot</h3>
+                  <img src="images/emIII/start.png" class="inline-image">
+                  <div class="row">
+                    <p>At the beginning of the shot, the puck is at rest on the stick. This means that any and all forces acting on it must necessarily have a counter-force that is equal and opposite to it. We can use this fact to explore the primary two forces that are acting on it: the normal and gravitational forces. Since the puck is at an angle, we can break these down into component forces. To do this, it helps to consider two sets of coordinate axes: the regular axes where x is along the ground and y is horizontal, and the puck's axes where x is along the stick blade. That is, the regular coordinate system but titled at such an angle to make the puck long along the x-axis.  I will denote this as x' and y' in constrast to the original x and y. <br><br> In this new coordinate system, the normal force points directly up at a perpindicular angle to the blade which here is the x-axis. (the "normal" angle). Gravitational force of course points towards the ground on the original y-axis but since the puck is at an angle, we can model this as being partly perpindicular to the puck and partly parallel to it - i.e. as having components in x' and y'. Since the puck is of course not flying off the stick, we know that the gravitational force in y' must be equal and opposite the normal force, which is only in y'. Thus, 
+                    </p>
+                    <img src="images/emIII/equations/F_N_=_F_G,_y'.png" class="inline-equation">
+                    <p><br>But what of the gravitational force along x'? There must be some force that is equal and opposite to it: the friction force. Since the puck can be angled to feel more gravitational force along x' and the frictional force will still hold it in place, we can use an inequality to descibe it:
+                    </p>
                     <img src="images/emIII/equations/friction.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p><br>Substituting,</p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/sub.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p><br>We can find the value of µ  by solving for the known slippage angle. Though this is a 3-dimensional problem, we can model it as being two-dimensional along the axis of greatest incline, which is not changing near the slippage threshold. We also know that it is right at this point that the gravitational force overtakes the frictional force so we will set them as equal to one another. Thus</p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/mu3.png" style="height: 18em">
-                    
-                    <div class="row">
-                        <p><br> At any given point then, the puck can be modeled as being held by two forces: the normal force pressing it against the stick blade and the related frictional force preventing it from sliding on the stick blade. Substituing the coefficient of friction, 
-                        </p>
-                    </div>
-                    
-                    <div class="row">
-                        <img src="images/emIII/equations/FN.png" class="inline-equation">
-                        <p><br></p>
-                    </div>
-                    
-                    <div class="row">
-                        <img src="images/emIII/equations/fs-final.png" class="inline-equation">
-                    </div>
-                    
-                    <div class="row">
-                        <p><br>and thus we have described the forces of the Michigan shot!</p>
-                    </div>
-                    
-                </section>
+                    <p><br>However, if we know the angle of the puck that causes it to slip, we know this is our maximum frictional force and can equate the two to solve for the coefficient of friction:</p>
+                    <img src="images/emIII/equations/coefficient.png" height="320 em">
+                  </div>
+                  <br>
+                  <h3>Maximum Extension</h3>
+                  <img src="images/emIII/half.png" class="inline-image">
+                  <div class="row">
+                    <p>As the skater wraps around the goal post (or chair), they push the stick out and around along the x-axis before bringing it back in for the shot release. The maximum point of extension in x provides a unique analysis point because it is a moment in which the x-velocity is going from negative to positive, and thus momentarily crosses 0. In fact, all the forces in x must also be (approximately) zero (there may be small perturbations or drag forces but these can be safely neglected). The net force is thus:
+                    </p>
+                    <img src="images/emIII/equations/half%20force.png" class="inline-equation"><p><br></p>
+                  </div>
+                  
+                  <h3>Separation</h3>
+                  <img src="images/emIII/full.png" class="inline-image">
+                  <div class="row">
+                    <p>Lastly, as the stick approaches a vertical orientation (relative to the ground), the puck is held in place briefly before separating and continuing on its trajectory without the driving force of the stick. Thus, while it may be feeling force in the negative x-direction from drag, the only external force independent of its motion is gravity. Since the puck is now falling, the frictional force must be lesser in magnitude than the gravitational force:
+                    </p>
+                    <img src="images/emIII/equations/f_s_%3C_F_G.png" class="inline-equation"><p><br></p>
+                  </div>
                 
-                <section>
-                    <h2>Theoretical vs. Actual</h2>
-                    <div class="row">
-                        <p>With the benefit of experimental data, let us now compare it with the model. Our positional data was fairly smooth save for some minor bumps and our velocity largely follows suit until we get to the apex of the shot.</p>
-                        
-                        <img src="images/emIII/vt.png" class="inline-graph">
-                    </div>
-                    
-                    <div class="row">
-                        <p> Both x, y, and total velocity all experience a brief period of extreme variation followed by minor bounce but a general return to form. Even without comparing to the video, we can tell that this disturbance comes at the peak of the shot by the drop off in y-velocity shortly after, signifying the puck being released from the stick. Looking at the video assures us that this variation is a data error and not an observed phenomenon. At no point in the shot does the the puck's velocity come close to approaching 40 m/s, even if the chart suggests otherwise. With this in mind, we can remove the erroneous data points and we are left with a smoother chart. 
-                        </p>
-                    </div>
-                    
-                    <div class="row">
-                        <p>To perform the removal, let us first identify roughly where the distrubance is happening. Careful examination of the data tells us it occurs from roughly t = 0.91 s to t = 0.95 s. To be sure, excluding these points, calculate the standard deviation of the rest of the data. If we remove values where the change in velocity is greater than 2 standard deviations, we can likely conclude this is an erroneous data point. This leaves us with a much smoother graph, albeit one with a bit of a gap.
-                        </p>
-                        
-                        <img src="images/emIII/ecvt.png" class="inline-graph">
-                    </div>
-                    
-                    <div class="row">
-                        <p>Smoothing the velocity graph is important because acceleration is the derivative of velocity and distubances perpetuate and get magnified. However, we also only care about the acceleration up until the puck falls off the stick and, since we can't take the derivative of non-continuous points, we can instead cut the time axis off at t = 0.92. <br><br>If out theories are correct, we should expedt that </p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/Fmax.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p> <br>That is, 
-                        </p>
-                    </div>
-                    <img src="images/emIII/equations/cosines2.png" style="height: 5em">
-                    
-                    <div class="row">
-                        <p> <br>Since cosine has a maximum value of 1 and a minimum value of -1, 
-                        </p>
-                    </div>
-                    
-                    <img src="images/emIII/equations/boundedF.png" class="inline-equation">
-                    
-                    <div class="row">
-                        <p>Looking at our acceleration graph (and temporarily neglecting mass)...</p>
-                    </div>
-                    
-                    <img src="images/emIII/acc.png" class="inline-graph">
-                    
-                    <div class="row">
-                        <p>Everything is within our bounds! Here I have compard total acceleration (due to the forces along both axes) to the total force to ensure boundary consistency. When we consider that the actual acceleration will be much smaller, both because the forces will rarely, if ever, be additive, and because multiplying by the mass to get the force will decrease the absolute value, the boundaries are shown to be satisfied! Indeed both in x and in y, no points exceed the maximum force predicted to occur and thus we can conclude that we have accurately described the physics of the Michigan! </p>
-                    </div>
+                  
+                  <h3>Modeling</h3>
+                  
+                  <div class="row">
+                    <p>These moments of the motion of the Michigan shot collectively tell a story of how the shot works - not just in terms of game mechanics but in terms of basic Physics principles. These moments of motion are captured in the free body diagrams below. 
+                    <br></p>
+                    <img src="images/emIII/FBDs.jpg" height="250em">
+                  </div>
+                  
+                  <div class="row">
+                    <p><br>Together, they model the forces of the Michigan shot over time and have accomplished our goal!
+                    <br></p>
+                  </div>
+
                 </section>
-                
-
-
         </div>
 
 		<!-- Footer -->
