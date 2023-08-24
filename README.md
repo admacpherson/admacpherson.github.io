@@ -9,6 +9,6 @@ Website design has been a passion of mine from an early age and transformed into
 
 <br>
 <i>
-Update: I've included a data visualization project I completed abroad at the University of Roehampton (London, England). It features 10 data vizzes from a common dataset – The UK National School Survey Project – made in Tableau and with descriptions underneath. I have not yet integrated it with the main page but it can be found at <a href="https://andrewm.tech/vizzes" target="_blank">andrewm.tech/vizzes</a>.
+Update: I've included a data visualization project I completed abroad at the University of Roehampton (London, England). It features 10 data vizzes from a common dataset – The UK National School Survey Project – made in Tableau and with descriptions underneath. It is not yet fully integrated but can be found at <a href="https://andrewm.tech/vizzes" target="_blank">andrewm.tech/vizzes</a>.
 </i>
 </p>
