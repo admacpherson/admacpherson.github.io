@@ -2665,6 +2665,28 @@ input, select, textarea {
 			margin: 0;
 		}
 
+/* Standalone articles */
+
+  .border-box {
+    border: 1px solid #2E4BB1;
+    border-radius: 25px;
+    padding: 1em;
+  }
+
+  .standalone a {
+    color: #a2a2a2;
+  }
+
+  .standalone a:hover h3{
+    color: #000000;
+  }
+
+  .standalone a:hover p{
+    color: #2E4BB1;
+  }
+
+
+
 /* Header */
 
 	#header {
