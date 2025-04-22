@@ -1762,16 +1762,13 @@ input, select, textarea {
 
 .topnav {
   display: inline-block;
+  overflow: hidden;
+  max-height: 5em;
+  text-decoration: none;
+  margin-top: 1em;
+  margin-bottom: -2em;
+  border-bottom: 1px solid black;
 }
-
-	.topnav {
-		overflow: hidden;
-		max-height: 5em;
-		height: 5em;
-		text-decoration: none;
-		margin-top: 1em;
-    margin-bottom: -2em;
-	}
 
 .topnav a {
   display: inline-block; /* ← shrink-wrap the box */
@@ -1780,9 +1777,9 @@ input, select, textarea {
   padding: 0.5em 1em; /* smaller padding = tighter box */
   text-decoration: none;
   font-size: 1.3em;
-  margin: 0.8em 0.5em; /* helps vertically center in navbar */
+  margin: 0.8em 0.5em 0; /* helps vertically center in navbar */
   border: 1px solid transparent; /* invisible border to prevent layout shift on hover */
-  border-radius: 6px;
+  border-radius: 10px;
   transition: all 0.2s ease;
 }
 
