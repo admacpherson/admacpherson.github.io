@@ -1758,6 +1758,10 @@ input, select, textarea {
   width: 65%;
   margin-left: 35%;
   text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
 }
 
 .topnav {
@@ -1766,8 +1770,9 @@ input, select, textarea {
   max-height: 5em;
   text-decoration: none;
   margin-top: 1em;
-  margin-bottom: -2em;
+  padding-bottom: -2em;
   border-bottom: 1px solid black;
+
 }
 
 .topnav a {
@@ -2810,6 +2815,7 @@ input, select, textarea {
 		max-width: 54em;
 		padding: 5em 4em 4em 4em;
 		width: calc(100% - 35%);
+    margin-top: -2em;
 	}
 
 		#main > section {
