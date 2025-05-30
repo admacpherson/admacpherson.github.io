@@ -1,0 +1,3 @@
+[submodule "Word-Games"]
+	path = Word-Games
+	url = https://github.com/admacpherson/Word-Games
