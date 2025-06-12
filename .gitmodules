@@ -1,3 +1,3 @@
 [submodule "Word-Games"]
-	path = temp-folder
+	path = word-games
 	url = https://github.com/admacpherson/Word-Games
