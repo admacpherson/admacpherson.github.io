@@ -3,4 +3,4 @@
 	url = https://github.com/admacpherson/Word-Games
 [submodule "horsel"]
 	path = horsel
-	url = https://github.com/admacpherson/horsel
+	url = https://github.com/admacpherson/horsel.git
