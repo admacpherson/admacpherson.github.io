@@ -34,4 +34,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # adjust if your site is in ./docs or ./build
+          publish_dir: ./
+          publish_branch: main
