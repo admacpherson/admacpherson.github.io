@@ -10,20 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Inject PAT for private submodules
+      # Inject classic PAT for private submodules
       - name: Configure Git for private submodules
         run: |
           git config --global url."https://${{ secrets.HORSEL_ACCESS }}:@github.com/".insteadOf "https://github.com/"
 
-      # Checkout repository and all submodules
+      # Checkout repository without auto submodule update
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          submodules: recursive
+          fetch-depth: 0
+          submodules: false
+
+      # Manually update submodules using PAT
+      - name: Update submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./  # adjust if your site is in ./docs or ./build
