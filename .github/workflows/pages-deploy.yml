@@ -10,18 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Configure Git credentials for private submodules
-      - name: Configure Git to access private submodules
+      - name: Configure Git for private submodules
         run: |
           git config --global url."https://${{ secrets.HORSEL_ACCESS }}:@github.com/".insteadOf "https://github.com/"
 
-      # Checkout your repo and private submodules
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           submodules: true
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
