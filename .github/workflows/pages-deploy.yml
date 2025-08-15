@@ -10,17 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Configure Git to use personal access token for private submodules
-      - name: Configure Git for private submodules
-        run: |
-          git config --global url."https://${{ secrets.HORSEL_ACCESS }}:@github.com/".insteadOf "https://github.com/"
-
-      # Checkout the repository and all submodules
-      - name: Checkout repository
+      # Checkout the repository and all submodules with PAT
+      - name: Checkout repository with private submodules
         uses: actions/checkout@v3
         with:
-          submodules: true
-          fetch-depth: 0  # ensures full history if needed
+          submodules: recursive
+          token: ${{ secrets.HORSEL_ACCESS }} 
+          fetch-depth: 0 
 
       # Deploy site to main branch
       - name: Deploy to GitHub Pages
