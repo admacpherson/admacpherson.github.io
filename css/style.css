@@ -1,0 +1,124 @@
+.square {
+    text-align: center;
+    padding: 5% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vh;
+}
+
+/*Opacity effect
+#square3:hover::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
+}*/
+
+.square a:hover {
+    cursor: pointer;
+}
+
+.highlight:hover {
+    background-color: rgba(5,156,108, 0.9);
+    color: white;
+}
+
+.highlight {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.nav-bar {
+    width: 100% !important; 
+    background-color: #059c6c;
+    overflow: hidden;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 5%;
+    width: 90%;
+}
+
+.nav-bar a:hover {
+    background-color: lightslategray;
+}
+
+.nav-bar a.active {
+    background-color: #0555E6;
+}
+
+.content {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#square1{
+    background-image: url("/images/vizzes/viz1.png");
+}
+
+#square2{
+    background-image: url("/images/vizzes/viz2.png");
+}
+
+#square3{
+    background-image: url("/images/vizzes/viz3.png");
+}
+
+#square4{
+    background-image: url("/images/vizzes/viz4.png");
+}
+
+#square5{
+    background-image: url("/images/vizzes/viz5.png");
+}
+
+#square6{
+    background-image: url("/images/vizzes/viz6.png");
+}
+
+#square7{
+    background-image: url("/images/vizzes/viz7.png");
+}
+
+#square8{
+    background-image: url("/images/vizzes/viz8.png");
+}
+
+#square9{
+    background-image: url("/images/vizzes/viz9.png");
+}
+
+#square10{
+    background-image: url("/images/vizzes/viz10.png");
+}
+
+#square11 {
+    background-image: url("/images/nss-logo.jpg");
+    background-position: center;
+}
+
+#square12 {
+    color: black;
+    text-align: left;
+    background-color: white;
+    padding-left: 2%;
+    padding-top: 2.5%;
+}
+
+#animation {
+    max-width: 100%;
+}
+
+#question-list {
+    line-height: 1.2;
+}
