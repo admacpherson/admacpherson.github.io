@@ -4,35 +4,29 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Inject classic PAT for private submodules
+      # Configure Git to use personal access token for private submodules
       - name: Configure Git for private submodules
         run: |
           git config --global url."https://${{ secrets.HORSEL_ACCESS }}:@github.com/".insteadOf "https://github.com/"
 
-      # Checkout repository without auto submodule update
+      # Checkout the repository and all submodules
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          submodules: false
+          submodules: true
+          fetch-depth: 0  # ensures full history if needed
 
-      # Manually update submodules using PAT
-      - name: Update submodules
-        run: |
-          git submodule sync --recursive
-          git submodule update --init --recursive
-
-      # Deploy to GitHub Pages
+      # Deploy site to main branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: main
+          publish_dir: ./           # folder containing site + submodules
+          publish_branch: main      # deploy to main for user page / custom domain
+          force_orphan: false       # keeps branch history intact
