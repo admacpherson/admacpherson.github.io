@@ -3,26 +3,27 @@ name: Deploy GitHub Pages with private submodule
 on:
   push:
     branches:
-      - main
+      - main  # run workflow on pushes to main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository and all submodules with PAT
+      # Checkout repo + private submodules
       - name: Checkout repository with private submodules
         uses: actions/checkout@v3
         with:
-          submodules: recursive
-          token: ${{ secrets.HORSEL_ACCESS }} 
-          fetch-depth: 0 
+          submodules: recursive                 # fetch all submodules
+          token: ${{ secrets.HORSEL_ACCESS }}   # PAT with read access to private submodules
+          fetch-depth: 0                        # full history
 
-      # Deploy site to main branch
+      # Deploy site to gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./           # folder containing site + submodules
-          publish_branch: gh-pages      # deploy to main for user page / custom domain
-          force_orphan: false       # keeps branch history intact
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # auto-provided by GitHub
+          publish_dir: ./                            # folder containing site + submodules
+          publish_branch: gh-pages                   # branch for Pages deployment
+          force_orphan: true                         # overwrite gh-pages completely
+          commit_message: "Deploy site via GitHub Actions"
