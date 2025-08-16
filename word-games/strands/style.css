@@ -1,0 +1,166 @@
+body, html {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body {
+    padding: 0 6rem;
+    user-select: none; /* Prevents text from being highlighted */
+    max-width: 100vw;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#prompt-box {
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+#todays-theme {
+    text-transform: uppercase;
+    background-color: lightblue;
+    font-size: 1em;
+}
+
+#prompt {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 2.5%;
+}
+
+#message {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    display: hidden;
+}
+
+#game-wrapper {
+    width: min(90vw, 80vh * 6/8); /*80vh * 6/8*/
+    height: auto;
+    aspect-ratio: 6 / 8;
+    margin: 0 auto;
+    display: block;
+    flex: 1 1 auto;
+}
+
+#board-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 7%;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    z-index: 2;
+    font-size: clamp(1.25rem,3vw, 1.5rem); /*clamp(min, ideal, max)*/
+}
+
+#grid, .cell {
+    touch-action: none;
+}
+
+.selected {
+    background-color: moccasin;
+}
+
+.confirmed {
+    background-color: lightblue;
+}
+
+.spangram {
+    background-color: gold;
+}
+
+#line-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#line-layer line:not(.confirmed-line):not(.spangram-line) {
+    stroke: moccasin; 
+    stroke-width: 15;
+}
+
+#line-layer line.confirmed-line {
+    stroke: lightblue; 
+    stroke-width: 15;
+}
+
+#line-layer line.spangram-line {
+    stroke: gold;
+    stroke-width: 15;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#hint-button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#words-found {
+    
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 1rem;
+    }
+    
+    #game-wrapper {
+        width: 90vw;
+        height: min(90vh, calc(100vw * 8 / 6));
+    }
+    
+}
