@@ -2847,7 +2847,7 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 0.4);
 		}
 
-	#footer .copyright {
+	#footer #copyright {
 		color: rgba(255, 255, 255, 0.4);
 		font-size: 0.8em;
 		list-style: none;
@@ -2855,7 +2855,7 @@ input, select, textarea {
 		padding: 0;
 	}
 
-		#footer .copyright li {
+		#footer #copyright li {
 			border-left: solid 1px rgba(255, 255, 255, 0.25);
 			display: inline-block;
 			line-height: 1em;
@@ -2863,13 +2863,13 @@ input, select, textarea {
 			padding-left: 0.75em;
 		}
 
-			#footer .copyright li:first-child {
+			#footer #copyright li:first-child {
 				border-left: 0;
 				margin-left: 0;
 				padding-left: 0;
 			}
 
-			#footer .copyright li a {
+			#footer #copyright li a {
 				color: inherit;
 			}
 
@@ -3210,7 +3210,7 @@ input, select, textarea {
 
 		/* Footer */
 
-			#footer .copyright li {
+			#footer #copyright li {
 				border-left-width: 0;
 				display: block;
 				line-height: 2.25em;
@@ -3289,11 +3289,11 @@ input, select, textarea {
 					margin: 0 0 1em 0;
 				}
 
-				#footer .copyright {
+				#footer #copyright {
 					margin: 0 0 1em 0;
 				}
 
-					#footer .copyright li {
+					#footer #copyright li {
 						border-left-width: 1px;
 						display: inline-block;
 						line-height: 1em;
@@ -3405,7 +3405,7 @@ input, select, textarea {
 
 		/* Footer */
 
-			#footer .copyright li {
+			#footer #copyright li {
 				border-left-width: 0;
 				display: block;
 				line-height: 2.25em;

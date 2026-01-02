@@ -247,7 +247,7 @@
                     <li><a href="mailto:andrewmacpherson01@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                     <li><a href="https://github.com/admacpherson/" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
                 </ul>
-                <ul class="copyright">
+                <ul id="copyright">
                     <li>&copy; Andrew Macpherson 2025</li>
                 </ul>
             </div>
@@ -276,6 +276,8 @@
               });
             });
           });
+            
+            document.getElementById("copyright").innerHTML = ("&copy; Andrew Macpherson " + new Date().getFullYear());
         </script>
 
 	</body>
