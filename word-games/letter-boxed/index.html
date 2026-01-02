@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Letter Box Game</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+    
+<body>
+    <div id="word-banner"></div>
+    <div id="word-banner-underline"></div>
+    <div id="popup-banner" class="hidden"></div>
+    <div id="stored-words"></div>
+    
+    <div id="game-board">
+        <svg id="line-layer"></svg>
+        <div id="inner-border"></div>
+    </div>
+    
+    <div id="buttons">
+        <button id="restart">Restart</button>
+        <button id="delete">Delete</button>
+        <button id ="enter">Enter</button>
+    </div>
+    
+    <script type="module" src="letterboxed.js" defer></script>
+    <script type="module" src="boards.js"></script>
+    
+</body>
+</html>
